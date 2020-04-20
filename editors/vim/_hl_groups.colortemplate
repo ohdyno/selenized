@@ -84,7 +84,7 @@ Label             -> Statement     # not seen
 Exception            br_yellow     none          bold
 Operator          -> Statement     # no need
 
-PreProc              orange        none
+PreProc              green       none
 Include              orange        none 
 Define            -> Include       # not seen
 PreCondit         -> Include       # fortran namespaces
