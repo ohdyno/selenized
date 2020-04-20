@@ -68,13 +68,13 @@ Comment              dim_0         none          italic
 
 Constant             cyan          none
 String            -> Constant
-Number               cyan          none bold
-Boolean              cyan          none bold
+    Number               magenta          none 
+Boolean           violet none
 Character         -> Constant
 Float             -> Constant
 
 Identifier           br_blue       none
-Function             blue          none bold
+Function             br_blue       none
 
 Statement            br_yellow     none
 Conditional       -> Statement     # no need
@@ -82,25 +82,25 @@ Repeat            -> Statement     # no need
 Keyword           -> Statement     # not seen
 Label             -> Statement     # not seen
 Exception            br_yellow     none          bold
-Operator             br_yellow     none          bold
+Operator          -> Statement     # no need
 
 PreProc              orange        none
-Define            -> PreProc       # not seen
-PreCondit         -> PreProc       # fortran namespaces
-Include              orange        none bold
+Include              orange        none 
+Define            -> Include       # not seen
+PreCondit         -> Include       # fortran namespaces
 Macro             -> Include       # sometimes used for imports, too
 
 Type                 green         none
-Typedef           -> Type          # vectors, lists etc
-StorageClass         green         none          bold italic   # type modifier (e.g. const)
-Structure            green         none          bold   # exceptions in python
+Typedef              green         none bold # vectors, lists etc
+StorageClass         green         none          italic   # type modifier (e.g. const)
+Structure            orange        none          # exceptions in python
 
 Special              red           none
-SpecialChar          red           none   bold # C string interpolation, escaped chars
 Delimiter         -> Special       # rare, mostly in vimscript
 SpecialComment    -> Special       # not seen
 Debug             -> Special       # not seen
 Tag               -> Special       # not seen
+SpecialChar          red           none   # C string interpolation, escaped chars
 
 Error                red           none          bold
 Todo                 magenta       bg_1          bold reverse
