@@ -68,13 +68,13 @@ Comment              dim_0         none          italic
 
 Constant             cyan          none
 String            -> Constant
-Number               red           none
-Boolean              red           none
+Number               cyan          none bold
+Boolean              cyan          none bold
 Character         -> Constant
 Float             -> Constant
 
 Identifier           br_blue       none
-Function             blue          none
+Function             blue          none bold
 
 Statement            br_yellow     none
 Conditional       -> Statement     # no need
@@ -87,16 +87,16 @@ Operator             br_yellow     none          bold
 PreProc              orange        none
 Define            -> PreProc       # not seen
 PreCondit         -> PreProc       # fortran namespaces
-Include              violet        none
+Include              orange        none bold
 Macro             -> Include       # sometimes used for imports, too
 
 Type                 green         none
 Typedef           -> Type          # vectors, lists etc
-StorageClass         green         none          italic   # type modifier (e.g. const)
-Structure            magenta       none          bold   # exceptions in python
+StorageClass         green         none          bold italic   # type modifier (e.g. const)
+Structure            green         none          bold   # exceptions in python
 
 Special              red           none
-SpecialChar          violet        none   # C string interpolation, escaped chars
+SpecialChar          red           none   bold # C string interpolation, escaped chars
 Delimiter         -> Special       # rare, mostly in vimscript
 SpecialComment    -> Special       # not seen
 Debug             -> Special       # not seen
